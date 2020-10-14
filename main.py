@@ -36,10 +36,6 @@ def findLowestCommonAncestor(root, n1, n2):
         not getPathToNodeFromRoot(root, path2, n2)):
         return -1
 
-    #Print the given paths to the console
-    print(f'PATH TO KEY 1 - <{n1}> :', path1)
-    print(f'PATH TO KEY 2 - <{n2}> :', path2)
-
     # Compare the paths, find first value between them that differs
     i = 0
     while (i < len(path1) and i < len(path2)):
@@ -48,7 +44,6 @@ def findLowestCommonAncestor(root, n1, n2):
         i += 1
 
     #Determine where paths diverge
-    print('LOWEST COMMON:', path1[i - 1], "\n")
     return path1[i - 1]
 
 if __name__ == '__main__':
